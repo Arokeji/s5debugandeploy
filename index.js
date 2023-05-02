@@ -4,7 +4,7 @@ const { userRoutes } = require("./routes/book.routes.js");
 // Conexion a la BBDD
 const { connect } = require("./db.js");
 try {
-  connect();
+  await connect();
 } catch (error) {
   console.log(`Ha ocurrido un error al conectar: ${error}`);
 }

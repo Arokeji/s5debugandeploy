@@ -2,6 +2,7 @@ console.log("::: Conectando a la BBDD :::");
 require("dotenv").config();
 
 const DB_CONNECTION = process.env.DB_CONNECTION;
+const DB_NAME = process.env.DB_NAME;
 
 const mongoose = require("mongoose");
 
@@ -10,7 +11,7 @@ const config = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   serverSelectionTimeoutMS: 5000,
-  dbName: "books"
+  dbName: DB_NAME
 };
 
 const connect = async () => {
